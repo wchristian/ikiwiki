@@ -1964,8 +1964,12 @@ sub template_depends ($$;@) {
 	);
 	return @opts if wantarray;
 
-	require HTML::Template;
-	return HTML::Template->new(@opts);
+    my $htc = "HTML::Template::Compiled";
+    my $t = $config{templateengine} || eval "require $htc" ? $htc : "HTML::Template";
+	eval "require $t;" or die $@;
+
+    push @opts, ( use_query => 1, case_sensitive => 0, global_vars => 2 ) if $t eq $htc;
+	return $t->new(@opts);
 }
 
 sub template ($;@) {

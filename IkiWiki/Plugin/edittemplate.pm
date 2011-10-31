@@ -4,7 +4,6 @@ package IkiWiki::Plugin::edittemplate;
 use warnings;
 use strict;
 use IkiWiki 3.00;
-use HTML::Template;
 use Encode;
 
 sub import {
