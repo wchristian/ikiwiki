@@ -1,3 +1,0 @@
-A [markdown mode](http://jblevins.org/projects/markdown-mode/) for 
-emacs can help in editing of ikiwiki
-[[ikiwiki/markdown]] files.

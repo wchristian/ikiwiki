@@ -1,4 +1,0 @@
-ikiwiki could support manpages (or general groff input files) and convert them
-to HTML. --[[JoshTriplett]]
-
-[[wishlist]]
